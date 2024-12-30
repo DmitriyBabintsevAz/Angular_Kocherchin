@@ -1,6 +1,7 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import { EditArticleStateInterface } from './types/edit-article-state.interface';
 import { updateArticleAction, updateArticleFailureAction, updateArticleSuccessAction } from './actions/update-article.actions';
+import { getArticleAction, getArticleFailureAction, getArticleSuccessAction } from './actions/get-article.actions';
 
 
 export const initialState: EditArticleStateInterface = {
@@ -32,6 +33,28 @@ const editArticleReducer = createReducer(
       ...state,
       isSubmitting: false,
       validationErrors: action.errors
+    })
+  ),
+  on(
+    getArticleAction,
+    (state): EditArticleStateInterface => ({
+      ...state,
+      isLoading: true
+    })
+  ),
+  on(
+    getArticleSuccessAction,
+    (state, action): EditArticleStateInterface => ({
+      ...state,
+      isLoading: false,
+      article: action.article
+    })
+  ),
+  on(
+    getArticleFailureAction,
+    (state): EditArticleStateInterface => ({
+      ...state,
+      isLoading: false
     })
   )
 )

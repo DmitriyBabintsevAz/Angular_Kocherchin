@@ -10,10 +10,11 @@ import { GetArticleEffects } from './store/effects/get-article.effects';
 import { UpdateArticleEffects } from './store/effects/update-article.effects';
 import { StoreModule } from '@ngrx/store';
 import { editArticleReducers } from './store/edit-article-reducer.reducer';
+import { LoadingModule } from '../shared/modules/loading/loading.module';
 
 const routes = [
   {
-    path: 'articles/',
+    path: 'articles/:slug/edit',
     component: EditArticleComponent
   }
 ]
@@ -26,6 +27,7 @@ const routes = [
     CommonModule,
     RouterModule.forChild(routes),
     ArticleFormModule,
+    LoadingModule,
     EffectsModule.forFeature([GetArticleEffects, UpdateArticleEffects]),
     StoreModule.forFeature('editArticle', editArticleReducers)
   ],

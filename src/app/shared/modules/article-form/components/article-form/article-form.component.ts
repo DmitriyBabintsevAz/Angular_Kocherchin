@@ -15,12 +15,12 @@ export class ArticleFormComponent implements OnInit {
 
   @Output('articleSubmit') articleSubmitEvent = new EventEmitter<ArticleInputInterface>()
 
-  initialValues: ArticleInputInterface = {
-    title: '',
-    description: '',
-    body: '',
-    tagList: []
-  }
+  // initialValues: ArticleInputInterface = {
+  //   title: '',
+  //   description: '',
+  //   body: '',
+  //   tagList: []
+  // }
 
   form = this.fb.group({
     title: '',
@@ -40,15 +40,22 @@ export class ArticleFormComponent implements OnInit {
 
 
   initializeForm(): void {
-    if (!this.initialValues) {
-      throw new Error('Inputs are not provided')
-    }
-    this.form.patchValue({
-      title: this.initialValues.title,
-      description: this.initialValues.description,
-      body: this.initialValues.body,
-      tagList: this.initialValues.tagList.join(' '),
+    this.form = this.fb.group({
+      title: this.initialValuesProps.title,
+      description: this.initialValuesProps.description,
+      body: this.initialValuesProps.body,
+      tagList: this.initialValuesProps.tagList.join(' ')
     })
+    // if (!this.initialValues) {
+    //   throw new Error('Inputs are not provided')
+    // }
+    // this.form.patchValue({
+    //   title: this.initialValues.title,
+    //   description: this.initialValues.description,
+    //   body: this.initialValues.body,
+    //   tagList: this.initialValues.tagList.join(' '),
+    // })
+    // console.log(this.initialValues.title);
   }
 
   onSubmit(): void {

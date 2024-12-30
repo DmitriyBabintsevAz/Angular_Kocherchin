@@ -2,7 +2,7 @@ import { ArticleInterface } from './../../../shared/types/article.interface';
 import { createAction, props } from "@ngrx/store";
 import { ActionTypes } from "../action-types";
 
-export const getARticleAction = createAction(
+export const getArticleAction = createAction(
   ActionTypes.GET_ARTICLE,
   props<{ slug: string }>()
 )
