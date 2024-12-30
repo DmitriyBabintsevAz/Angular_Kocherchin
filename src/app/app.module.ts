@@ -40,9 +40,9 @@ import { EditArticleModule } from './edit-article/edit-article.module';
     TopBarModule,
     GlobalFeedModule,
     YourFeedModule,
-    TagFeedModule,
-    ArticleModule,
+    TagFeedModule,    
     CreateArticleModule,
+    ArticleModule,
     EditArticleModule
 
   ],
