@@ -63,7 +63,10 @@ export class ArticleComponent implements OnInit, OnDestroy {
   }
 
   fetchData(): void {
-    this.store.dispatch(getArticleAction({ slug: this.slug }))
+    
+       this.store.dispatch(getArticleAction({ slug: this.slug }))
+    
+    
   }
 
   deleteArticle(): void {

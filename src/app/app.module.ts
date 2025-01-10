@@ -42,10 +42,8 @@ import { SettingsModule } from './settings/settings.module';
     GlobalFeedModule,
     YourFeedModule,
     TagFeedModule,
-    ArticleModule,
     CreateArticleModule,
-    EditArticleModule,
-    SettingsModule
+    EditArticleModule
 
   ],
   providers: [
