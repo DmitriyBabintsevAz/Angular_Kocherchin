@@ -22,6 +22,7 @@ const routes = [
   ],
   imports: [
     CommonModule,
+    // SettingsComponent,
     RouterModule.forChild(routes),
     StoreModule.forFeature('settings', reducers),
     // EffectsModule.forFeature(LogoutEffects),

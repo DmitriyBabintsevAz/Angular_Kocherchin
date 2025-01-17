@@ -13,7 +13,8 @@ import { logoutActions } from '../../../auth/store/actions/sync.actions';
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
-  styleUrl: './settings.component.scss'
+  styleUrl: './settings.component.scss',
+  standalone: false
 })
 export class SettingsComponent implements OnInit, OnDestroy {
 
