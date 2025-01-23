@@ -40,12 +40,15 @@ export class ArticleFormComponent implements OnInit {
 
 
   initializeForm(): void {
+    // if (this.initialValuesProps) {
     this.form = this.fb.group({
       title: this.initialValuesProps.title,
       description: this.initialValuesProps.description,
       body: this.initialValuesProps.body,
       tagList: this.initialValuesProps.tagList.join(' ')
     })
+    // }
+
     // if (!this.initialValues) {
     //   throw new Error('Inputs are not provided')
     // }

@@ -14,6 +14,8 @@ import { TagListModule } from '../tag-list/tag-list.module';
 import { AddToFavoritesModule } from '../add-to-favorites/add-to-favorites.module';
 
 
+
+
 @NgModule({
   declarations: [
     FeedComponent
@@ -27,7 +29,8 @@ import { AddToFavoritesModule } from '../add-to-favorites/add-to-favorites.modul
     LoadingModule,
     PaginationModule,
     TagListModule,
-    AddToFavoritesModule
+    AddToFavoritesModule,
+
   ],
   exports: [
     FeedComponent

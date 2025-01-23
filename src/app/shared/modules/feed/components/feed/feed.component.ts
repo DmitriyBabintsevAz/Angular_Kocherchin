@@ -12,7 +12,6 @@ import querystring from 'query-string'
   selector: 'app-feed',
   templateUrl: './feed.component.html',
   styleUrl: './feed.component.scss',
-  standalone: false
 })
 export class FeedComponent implements OnInit, OnDestroy, OnChanges {
   @Input('apiUrl') apiUrlProps: string

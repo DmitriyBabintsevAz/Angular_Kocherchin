@@ -44,6 +44,7 @@ import { UserProfileModule } from './user-profile/user-profile.module';
     YourFeedModule,
     TagFeedModule,
     CreateArticleModule,
+    ArticleModule,
     EditArticleModule,
     SettingsModule,
     UserProfileModule

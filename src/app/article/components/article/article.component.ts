@@ -32,9 +32,13 @@ export class ArticleComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+
     this.initializeValues();
     this.initializeListeners();
-    this.fetchData();
+    if (this.slug !== 'new') {
+      this.fetchData();
+
+    }
   }
 
   ngOnDestroy(): void {
@@ -63,10 +67,12 @@ export class ArticleComponent implements OnInit, OnDestroy {
   }
 
   fetchData(): void {
-    
-       this.store.dispatch(getArticleAction({ slug: this.slug }))
-    
-    
+
+
+    // if (this.slug !== 'new') {
+    this.store.dispatch(getArticleAction({ slug: this.slug }))
+    // }
+
   }
 
   deleteArticle(): void {
